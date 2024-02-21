@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="height:100%">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>OpenLink Ads</title>
+	</head>
+	<body id="image" style="margin: 0px; background-size: cover; background-repeat: no-repeat; background-image: url('#');">
+		<a href="#" target="_blank" class="wholepage" id="imglink"></a>
+		<script type="text/javascript">
+			//user2663434 did the code below, and melodicake used this and I'm using this thx to her now
+			// stolen!
+			var images = [
+			  ""  
+        "https://i.imgur.com/8484t5e.gif",
+				"https://i.imgur.com/QzAUI59.png",
+				"https://i.imgur.com/lLp9PLt.jpeg",
+        "https://theoldnet.com/images/theoldnetanimblur2.gif",
+        "https://www.oldavista.com/public/button.gif"
+			];
+
+			var links = [
+			  "https://oerrorpage.neocities.org"
+        "https://neo-neighborhoods.neocities.org",
+				"https://44nifty.neocities.org",
+				"https://www.reddit.com/r/squarespace/comments/w2jtwl/squarespace_is_so_incredibly_frustrating_in_every/",
+        "https://theoldnet.com",
+			"http://www.oldavista.com/"
+      ];
+
+			function randImg(index) {
+			    var size = images.length;
+			    var i;
+			    if (index) {
+			      i = index;
+			    } else {
+			      i = Math.floor(size * Math.random());
+			    }
+			    document.getElementById('image').style.backgroundImage = "url('"+images[i]+"')";
+			    document.getElementById('imglink').href = links[i];
+			    setTimeout(randImg, 30000);
+			}
+
+			randImg();
+		</script>
+		<div class="fixed">
+			<a href="https://fazlabz-dev.github.io/openlink/" target="_blank" style="color:dimgray;">OpenLink Ads</a>
+		</div>
+		<style>
+			div.fixed {
+			  position: fixed;
+			  bottom: 0;
+			  right: 0;
+			  padding: 4px;
+			  border: 1px solid;
+			  border-color: gray;
+			  border-top-left-radius: 4px;
+			  background-color: #ffffffc0;
+			  font-size: x-small;
+			  font-family: sans-serif;
+			}
+			a.wholepage {
+			   position: absolute;
+			   top: 0;
+			   left: 0;
+			   right: 0;
+			   bottom: 0;
+			   width: 100%;
+			   height: 100%;
+			   text-indent: -9999px; /* we don't need to see the text, but some users and robots such as Google do */
+			}
+		</style>
+	</body>
+</html>
